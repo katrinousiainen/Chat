@@ -3,6 +3,14 @@
 @{
     ViewData["Title"] = "Create";
 }
+<link href="https://fonts.googleapis.com/css?family=McLaren|Ubuntu&display=swap" rel="stylesheet">
+<style>
+    * {
+        font-family: 'McLaren', cursive;
+        font-family: 'Ubuntu', sans-serif;
+    }
+</style>
+
 
 <h1>Luo uusi viesti</h1>
 
@@ -29,7 +37,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="FromPersonId" class="control-label"></label>
-                <select asp-for="FromPersonId" class ="form-control" asp-items="ViewBag.FromPersonId"></select>
+                <select asp-for="FromPersonId" class="form-control" asp-items="ViewBag.FromPersonId"></select>
             </div>
 
             <div class="form-group">
