@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YACA", "YACA\YACA.csproj", "{237CAE26-ED30-4AE3-B490-DCD063E33824}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{237CAE26-ED30-4AE3-B490-DCD063E33824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237CAE26-ED30-4AE3-B490-DCD063E33824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237CAE26-ED30-4AE3-B490-DCD063E33824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237CAE26-ED30-4AE3-B490-DCD063E33824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11422E6F-E0B9-495B-8535-B60E16160EDB}
+	EndGlobalSection
+EndGlobal

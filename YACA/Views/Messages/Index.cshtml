@@ -1,0 +1,59 @@
+﻿@model IEnumerable<YACA.Models.Message>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Viestit</h1>
+
+<p>
+    <a asp-action="Create">Luo uusi viesti</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+              Aihe
+            </th>
+            <th>
+               Teksti
+            </th>
+            <th>
+               Lähetysaika
+            </th>
+            <th>
+               Kategoria
+            </th>
+            <th>
+               Lähettäjä
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SendTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromPerson.Description)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MessageId">Muokkaa</a> |
+                <a asp-action="Details" asp-route-id="@item.MessageId">Tietoja</a> |
+                <a asp-action="Delete" asp-route-id="@item.MessageId">Poista</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

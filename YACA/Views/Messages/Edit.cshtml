@@ -1,0 +1,66 @@
+﻿@model YACA.Models.Message
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Muokkaa</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MessageId" />
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MessageText" class="control-label"></label>
+                <input asp-for="MessageText" class="form-control" />
+                <span asp-validation-for="MessageText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SendTime" class="control-label"></label>
+                <input asp-for="SendTime" class="form-control" />
+                <span asp-validation-for="SendTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromPersonId" class="control-label"></label>
+                <select asp-for="FromPersonId" class="form-control" asp-items="ViewBag.FromPersonId"></select>
+                <span asp-validation-for="FromPersonId" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="PrivateMessage" /> @Html.DisplayNameFor(model => model.PrivateMessage)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToPersonId" class="control-label"></label>
+                <input asp-for="ToPersonId" class="form-control" />
+                <span asp-validation-for="ToPersonId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExpireAt" class="control-label"></label>
+                <input asp-for="ExpireAt" class="form-control" />
+                <span asp-validation-for="ExpireAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Takaisin listaan</a>
+</div>
+
